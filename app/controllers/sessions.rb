@@ -1,6 +1,9 @@
 get '/' do
-  # Look in app/views/index.erb
-  erb :index
+	if session[:user_id]
+		erb :welcome
+	else
+	  erb :index
+	end
 end
 
 post '/signup' do
@@ -12,7 +15,7 @@ post '/signup' do
 	if @user.valid?
 		@user = User.find_by_email(params[:email])
 		session[:user_id] = @user.id
-		redirect "/user/#{@user.id}"
+		redirect "/user/#{session[:user_id]}"
 	else
 		redirect '/'
 	end
@@ -22,7 +25,7 @@ post '/login' do
 	@user = User.find_by_email(params[:email])
 	if @user && @user.password == params[:password_hash]
 		session[:user_id] = @user.id
-		redirect "/user/#{@user.id}"
+		redirect "/user/#{session[:user_id]}"
 	else
 		redirect '/'
 	end
