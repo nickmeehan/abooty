@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :aboots
   validates :email, uniqueness: true
   validates :handle, uniqueness: true
 
