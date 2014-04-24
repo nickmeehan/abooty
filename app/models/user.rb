@@ -1,4 +1,4 @@
-class Users < ActiveRecord::Base
+class User < ActiveRecord::Base
   # Remember to create a migration!
   validates :email, uniqueness: true
   validates :handle, uniqueness: true

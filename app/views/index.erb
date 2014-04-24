@@ -2,6 +2,7 @@
   <h1>Welcome to Sinatra!</h1>
   <p>Hello, world!</p>
 
+
   <table>
     <tr>
       <th>File Description</th>
@@ -21,4 +22,19 @@
     </tr>
   </table>
   <%= erb :_aboot_form %>
+
+  <form action="/signup" method="post">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="handle" placeholder="preferred handle">
+    <input type="text" name="email" placeholder="email">
+    <input type="password" name="password_hash" placeholder="password">
+    <input type="submit" value="Sign-up">
+  </form>
+
+  <form action="/login" method="post">
+    <input type="text" name="email" placeholder="email">
+    <input type="password" name="password_hash" placeholder="password">
+    <input type="submit" value="Login">
+  </form>
+
 </div>
