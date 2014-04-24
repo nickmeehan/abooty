@@ -55,5 +55,26 @@ body {
 
 .aboot_detail {
   width: 75%;
-  max-width: 400px;
+  max-width: 500px;
+  display: inline-block;
+  border: 1px solid red;
+  border-radius: 20px;
+  margin: 50px;
+}
+
+#gravatar {
+  float: left;
+  margin: 10px;
+}
+
+#gravatar img {
+  border-radius: 40px;
+}
+
+#aboot_body {
+  margin: 10px;
+}
+
+#aboot_body p {
+  margin: 0;
 }

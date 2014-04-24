@@ -1,14 +1,15 @@
 <div class="aboot_detail">
   <div id="gravatar">
     <!-- link to gravatar of user -->
+    <% email_address = "james.hulley@gmail.com" %>
+    <% hash = Digest::MD5.hexdigest(email_address) %>
+    <% image_src = "http://www.gravatar.com/avatar/#{hash}" %>
+    <img src="<%= image_src %>">
   </div>
+  
   <div id="aboot_body">
     <div id="user_handle">
       <!-- link to user' handle -->
-      <% email_address = "james.hulley@gmail.com" %>
-      <% hash = Digest::MD5.hexdigest(email_address) %>
-      <% image_src = "http://www.gravatar.com/avatar/#{hash}" %>
-      <img src="<%= image_src %>">
       <a href="">@Hulley_Wood</a>
     </div>
 
