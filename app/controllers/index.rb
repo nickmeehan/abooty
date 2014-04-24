@@ -13,5 +13,6 @@ get '/aboots' do
 end
 
 get '/users/:id' do
-
+  @user = User.find(session[:user_id])
+  erb :_profile_page
 end
