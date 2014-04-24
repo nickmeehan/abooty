@@ -12,3 +12,6 @@ get '/aboots' do
   erb :_home_page
 end
 
+get '/users/:id' do
+
+end
