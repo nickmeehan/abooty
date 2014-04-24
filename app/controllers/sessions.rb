@@ -11,7 +11,7 @@ post '/signup' do
 	@user.save!
 	if @user.valid?
 		@user = User.find_by_email(params[:email])
-		sessions[:user_id] = @user.id
+		session[:user_id] = @user.id
 		redirect "/user/#{@user.id}"
 	else
 		redirect '/'
@@ -21,7 +21,7 @@ end
 post '/login' do
 	@user = User.find_by_email(params[:email])
 	if @user && @user.password == params[:password_hash]
-		sessions[:user_id] = @user.id
+		session[:user_id] = @user.id
 		redirect "/user/#{@user.id}"
 	else
 		redirect '/'
