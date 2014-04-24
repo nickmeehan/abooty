@@ -1,9 +1,58 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  min-height: 100%;
+  background: url('../img/maple_leaf.png') 50% 200px;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
-th {
-  text-align: left;
+
+.main_page {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+.header {
+  height: 150px;
+}
+
+.header_1, .header_4 {
+  width: 20%;
+  height: 100%;
+  background: red;
+  display: inline-block;
+}
+
+.header_middle {
+  width: 60%;
+  margin: 0 -4px 0 -4px;
+  background: white;
+  display: inline-block;
+}
+
+.header_2 {
+  text-align: center;
+}
+
+.header_text {
+  margin: 0;
+  display: inline-block;
+}
+
+.header h1 {
+  font-size: 70px
+}
+
+.push {
+  height: 100px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer h3 {
+  text-align: center;
 }
