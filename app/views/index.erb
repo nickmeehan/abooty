@@ -1,9 +1,6 @@
 <div class="container">
 
-  <%= erb :_aboot_detail %>
-
   <%= erb :_aboot_form %>
-
 
   <form action="/signup" method="post">
     <input type="text" name="name" placeholder="name">
@@ -18,5 +15,7 @@
     <input type="password" name="password_hash" placeholder="password">
     <input type="submit" value="Login">
   </form>
+
+  <%= erb :_aboot_list %>
 
 </div>
