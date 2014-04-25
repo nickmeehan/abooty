@@ -25,6 +25,7 @@ h1 {
   height: 150px;
   position: fixed;
   width: 100%;
+  display: inline-block;
 }
 
 .header_1, .header_4 {
