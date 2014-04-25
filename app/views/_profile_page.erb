@@ -1,6 +1,6 @@
 <%= erb :_gravatar_image %>
 <% if @user.id == session[:user_id] %>
-	<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
+	<h2><%= "Eh! Welcome back, #{@user.name.capitalize}!" %></h2>
 
 <% end %>
 <% if @user.id != session[:user_id] %>
