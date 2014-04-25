@@ -20,6 +20,8 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'rack-flash3'
+
 group :test do
   gem 'rspec'
   gem 'rack-test'

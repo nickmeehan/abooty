@@ -4,7 +4,12 @@ get '/aboots' do
 end
 
 post '/aboots/new' do
-  Aboot.create(content: params[:content], user_id: session[:user_id])
+  aboot = Aboot.create(content: params[:content], user_id: session[:user_id])
+
+  # flash[:notice] = aboot.errors.messages[:content].first
+
+  flash[:notice] = aboot.errors.full_messages.first
+
   redirect '/aboots'
 end
 
