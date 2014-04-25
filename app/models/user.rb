@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_many :aboots
+  has_many :favorites
+
   validates :email, uniqueness: true
   validates :handle, uniqueness: true
 
