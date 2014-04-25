@@ -1,6 +1,8 @@
+<div id="profile_header">
 <%= erb :_gravatar_image %>
 <% if @user.id == session[:user_id] %>
 	<h2><%= "Eh! Welcome back, #{@user.name.capitalize}!" %></h2>
+</div>
 
 <% end %>
 <% if @user.id != session[:user_id] %>
