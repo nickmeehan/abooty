@@ -4,7 +4,12 @@ helpers do
     feed_aboots = []
     feed_aboots << get_following_aboots
     feed_aboots << get_following_reboots
+    feed_aboots << get_my_aboots
     feed_aboots.flatten.sort_by { |aboot| aboot.created_at }
+  end
+
+  def get_my_aboots
+    current_user.aboots
   end
 
   def get_following_aboots
