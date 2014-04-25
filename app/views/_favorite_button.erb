@@ -1,5 +1,11 @@
-<div class = "favorite_button">
-  <form action="/favorite/new/<%= @aboot.id %>" method="post">
-    <input type="submit" value="Favorite">
-  </form>
+<div id="favorite" class="button_inline">
+  <div id="favorite_button" class="aboot_footer">
+    <form action="/favorite/new/<%= @aboot.id %>" method="post">
+      <input type="submit" value="Favorite">
+    </form>
+  </div>
+
+  <div id="favorite_count" class="aboot_footer">
+    <h4><%= @aboot.favorites.count %></h4>
+  </div>
 </div>

@@ -1,0 +1,11 @@
+<div id="reboot" class="button_inline">
+  <div id="reboot_button" class="aboot_footer">
+    <form method="post" action="/reboots/new?id=<%= @aboot.id %>">
+      <input type="submit" value="Reboot it!">
+    </form>
+  </div>
+
+  <div id="reboot_count" class="aboot_footer">
+    <h4><%= @aboot.reboots.count %></h4>
+  </div>
+</div>

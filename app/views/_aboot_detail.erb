@@ -17,12 +17,7 @@
   </div>
 
   <div id="aboot_buttons">
-    <div id="reboot_button" class="aboot_footer">
-      <form method="post" action="/reboots/new?id=<%= @aboot.id %>">
-        <input type="submit" value="Reboot it!"></form>
-      </div>
-          <div id="reboot_count" class="aboot_footer">
-      <%= @aboot.reboots.count %>
-    </div>
-    </div>
+    <%= erb :_reboot_button %>
+    <%= erb :_favorite_button %>
   </div>
+</div>

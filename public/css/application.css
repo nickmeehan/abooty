@@ -95,3 +95,15 @@ h1 {
   display: inline-block;
 }
 
+.aboot_buttons {
+  display: inline-block;
+}
+
+.button_inline {
+  display: inline-block;
+}
+
+.button_inline h4 {
+  margin: 0;
+}
+
