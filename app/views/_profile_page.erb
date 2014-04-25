@@ -1,7 +1,5 @@
-<%= erb :_gravatar_image %>
 <% if @user.id == session[:user_id] %>
-	<h2><%= "Eh! Welcome back, #{@user.name.capitalize}!" %></h2>
-
+  <%= erb :_profile_box %>
 <% end %>
 <% if @user.id != session[:user_id] %>
 	<% if @user.followers.include?(@all_users.find(session[:user_id])) %>

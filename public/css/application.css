@@ -74,6 +74,17 @@ h1 {
   margin: 50px;
 }
 
+.profile_detail {
+  box-shadow: 10px 10px 5px #888888;
+  background: #FFFFEE;
+  width: 90%;
+  max-width: 800px;
+  display: inline-block;
+  border: 2px solid red;
+  border-radius: 20px;
+  margin: 0 50px 50px 50px;
+}
+
 #gravatar {
   float: left;
   margin: 10px;
@@ -85,6 +96,15 @@ h1 {
 
 #aboot_body {
   margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+#profile_body {
+  text-align: center;
 }
 
 #aboot_body p {
