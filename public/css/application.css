@@ -90,3 +90,8 @@ h1 {
 #aboot_body p {
   margin: 0;
 }
+
+.aboot_footer {
+  display: inline-block;
+}
+
