@@ -1,6 +1,6 @@
-html, body {
+body {
   height: 100%;
-  background: url('../img/maple_leaf.png') 50% 200px;
+  background: url('../img/maple_leaf.png') 50% 300px;
   background-repeat:no-repeat;
   background-attachment:fixed;
 }
@@ -13,7 +13,7 @@ h1 {
 .main_page {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  padding-top: 222px;
   width: 1000px;
 }
 
@@ -23,6 +23,9 @@ h1 {
 
 .header {
   height: 150px;
+  position: fixed;
+  width: 100%;
+  display: inline-block;
 }
 
 .header_1, .header_4 {
@@ -50,6 +53,23 @@ h1 {
 
 .header h1 {
   font-size: 70px
+}
+
+.header h2 {
+  padding-top: 11px;
+  font-size: 16px;
+}
+
+#new_aboot {
+  text-align: center;
+}
+
+#profile_header {
+  margin: 20px;
+}
+
+#profile_header h2 {
+  padding: 30px;
 }
 
 .footer {

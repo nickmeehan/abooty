@@ -1,6 +1,6 @@
 <% if current_user %>
   <nav>
-    <ul>
+    <ul id="super_ul">
       <li><a href="/">Home</a></li>
     <li><a href="/global">Global</a></li>
       <li><a href="/users/<%= session[:user_id] %>">Profile</a></li>
@@ -14,3 +14,4 @@
     </ul>
   </nav>
 <% end %>
+  
