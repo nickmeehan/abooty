@@ -3,13 +3,16 @@
 	<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
 <% end %>
 <% if @user.id != session[:user_id] %>
-	<form action="/follow" method="post">
-		<input type="submit" value="Follow">
-	</form>
 
-	<form action="/unfollow" method="post">
-		<input type="submit" value="Unfollow">
-	</form>
+	<% if @user.followers.include?(@all_users.find(session[:user_id])) %>
+		<form action="/unfollow?user_id=<%= @user.id %>" method="post">
+			<input type="submit" value="Unfollow">
+		</form>
+	<% else %>
+		<form action="/follow?user_id=<%= @user.id %>" method="post">
+			<input type="submit" value="Follow">
+		</form>
+	<% end %>
 <% end %>
 
 <form method="get" action="/aboots">

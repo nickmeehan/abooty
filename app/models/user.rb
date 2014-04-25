@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   	self.password_hash = @password
   end
 
-  def self.following
+  def following
     following = Connection.where(user_id: session[:user_id])
     following.map! do |followed|
       User.find(followed.follower_id)
