@@ -19,11 +19,11 @@ post '/unfollow' do
 	redirect "/users/#{params[:user_id]}"
 end
 
-get '/results' do
-  if params[:user_input]
-    search_terms = params[:user_input]
-    @users = User.where("handle LIKE ? or name LIKE ?", "%#{search_terms}%", "%#{search_terms}%")
-    @users = User.all
-  end
-  erb :users
-end
+# get '/results' do
+#   if params[:user_input]
+#     search_terms = params[:user_input].downcase
+#     @users = User.where("de_handle LIKE ? or de_name LIKE ?", "%#{search_terms}%", "%#{search_terms}%")
+#     # @users = User.all
+#   end
+#   erb :users
+# end
