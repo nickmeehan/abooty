@@ -21,7 +21,6 @@ gem 'rake'
 gem 'shotgun'
 
 group :test do
-  gem 'faker'
   gem 'rspec'
   gem 'rack-test'
   gem 'capybara'
