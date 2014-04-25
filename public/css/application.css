@@ -1,5 +1,5 @@
-body {
-  min-height: 100%;
+html, body {
+  height: 100%;
   background: url('../img/maple_leaf.png') 50% 200px;
   background-repeat:no-repeat;
   background-attachment:fixed;
@@ -14,6 +14,10 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   width: 1000px;
+}
+
+.container {
+  min-height: 100%;
 }
 
 .header {
@@ -86,3 +90,8 @@ h1 {
 #aboot_body p {
   margin: 0;
 }
+
+.aboot_footer {
+  display: inline-block;
+}
+

@@ -1,0 +1,5 @@
+class Reboot < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :aboot
+
+end
