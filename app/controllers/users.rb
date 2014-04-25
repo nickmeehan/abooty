@@ -1,11 +1,11 @@
 get '/followers' do
-	@user_followers = User.find(session[:user_id]).followers
-	erb :followers
+	@users = User.find(session[:user_id]).followers
+	erb :users
 end
 
 get '/following' do
-	@user_following = User.find(session[:user_id]).following
-	erb :following
+	@users = User.find(session[:user_id]).following
+	erb :users
 end
 
 
@@ -17,4 +17,13 @@ end
 post '/unfollow' do
 	User.find(params[:user_id]).followers.destroy(User.find(session[:user_id]))
 	redirect "/users/#{params[:user_id]}"
+end
+
+get '/results' do
+  if params[:user_input]
+    search_terms = params[:user_input]
+    @users = User.where("handle LIKE ? or name LIKE ?", "%#{search_terms}%", "%#{search_terms}%")
+    @users = User.all
+  end
+  erb :users
 end
