@@ -1,2 +1,10 @@
 <%= erb :_gravatar_image %>
 <h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
+
+<form action="/follow" method="post">
+	<input type="submit" value="Follow">
+</form>
+
+<form action="/unfollow" method="post">
+	<input type="submit" value="Unfollow">
+</form>

@@ -1,3 +1,8 @@
+get '/aboots' do
+  @aboots = Aboot.all
+  erb :_home_page
+end
+
 post '/aboots/new' do
   Aboot.create(content: params[:content], user_id: session[:user_id])
   redirect '/aboots'
