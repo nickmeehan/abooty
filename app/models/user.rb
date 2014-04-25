@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :aboots
+  has_many :favorites
   has_many :connections, foreign_key: :follower_id
   has_many :followers, through: :connections, source: :user
   validates :name, presence: true
