@@ -1,0 +1,7 @@
+<div class="favorites_list">
+  <h3>Favorite Tweets</h3>
+  <% @favorites.each do |favorite| %>
+    <% @aboot = favorite.aboot %>
+    <%= erb :_aboot_detail %>
+  <% end %>
+</div>
