@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
 
   def following
     following = Connection.where(user_id: session[:user_id])
+    ##note## This could be a one-liner ##note##
     following.map! do |followed|
       User.find(followed.follower_id)
     end

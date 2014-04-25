@@ -1,6 +1,8 @@
 <div class="favorites_list">
   <h3>Favorite Tweets</h3>
   <% @favorites.each do |favorite| %>
+
+    <!-- ##note## Can pass this in using the locals argument with partials ##note## -->
     <% @aboot = favorite.aboot %>
     <%= erb :_aboot_detail %>
   <% end %>

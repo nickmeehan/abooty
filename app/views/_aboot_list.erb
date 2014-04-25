@@ -1,6 +1,9 @@
 <div class="aboot_list">
 
+  <!-- ##note## We should put this reverse logic in a helper method for generating news feed ##note## -->
   <% @aboots.reverse.each do |aboot| %>
+
+  <!-- ##note## Change this to passing a local ##note## -->
   <% @aboot = aboot %>
   <%= erb :_aboot_detail %>
   <% end %>
