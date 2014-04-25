@@ -4,10 +4,10 @@ class User < ActiveRecord::Base
   has_many :favorites
   has_many :connections, foreign_key: :follower_id
   has_many :followers, through: :connections, source: :user
-  validates :name, presence: true
-  validates :handle, presence: true
-  validates :email, presence: true
-  validates :password_hash, presence: true
+  validates :name, presence: { message: "Really, no name?"}
+  validates :handle, presence: { message: "You need a handle homie"}
+  validates :email, presence: {message: "If you don't have an email address, get one"}
+  validates :password_hash, presence: {message: "You probably want a password"}
   validates :email, uniqueness: true
   validates :handle, uniqueness: true
 

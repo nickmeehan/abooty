@@ -12,6 +12,8 @@ require 'uri'
 require 'pathname'
 require 'bcrypt'
 
+require 'rack-flash'
+
 require 'pg'
 require 'active_record'
 require 'logger'
@@ -47,3 +49,5 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+use Rack::Flash, :sweep => true
