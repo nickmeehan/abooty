@@ -1,0 +1,8 @@
+<div class = "errors">
+  <% if flash[:notice] %>
+  <h4>Errors:</h4>
+    <% flash[:notice].each do |message| %>
+  <p><%= message %></p>
+    <% end %>
+  <% end %>
+</div>
