@@ -3,12 +3,12 @@ post '/aboots/new' do
 
   flash[:notice] = error_messages(aboot)
 
-  redirect '/aboots'
+  redirect '/'
 end
 
 post '/reboots/new' do
   Reboot.create(aboot_id: params[:id], user_id: session[:user_id])
-  redirect '/aboots'
+  redirect '/'
 end
 
 get '/global' do
