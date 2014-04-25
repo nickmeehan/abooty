@@ -19,3 +19,12 @@
 <form action="/logout" method="post">
   <input type="submit" value="logout">
 </form>
+
+<div class="aboot_list">
+
+  <% @user.aboots.reverse.each do |aboot| %>
+  <% @aboot = aboot %>
+  <%= erb :_aboot_detail %>
+  <% end %>
+
+</div>
