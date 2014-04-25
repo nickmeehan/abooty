@@ -1,7 +1,7 @@
 get '/' do
 	if session[:user_id]
-		@aboots = Aboot.all
-		redirect '/aboots'
+	  @aboots = personal_feed
+	  erb :_home_page
 	else
 	  erb :index
 	end
@@ -16,7 +16,7 @@ post '/signup' do
 	if @user.valid?
 		@user = User.find_by_email(params[:email])
 		session[:user_id] = @user.id
-		redirect "/aboots"
+		redirect "/"
 	else
 		redirect '/'
 	end
@@ -26,7 +26,7 @@ post '/login' do
 	@user = User.find_by_email(params[:email])
 	if @user && @user.password == params[:password_hash]
 		session[:user_id] = @user.id
-		redirect "/aboots"
+		redirect "/"
 	else
 		redirect '/'
 	end
