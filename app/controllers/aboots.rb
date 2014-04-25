@@ -1,5 +1,8 @@
 post '/aboots/new' do
-  Aboot.create(content: params[:content], user_id: session[:user_id])
+  aboot = Aboot.create(content: params[:content], user_id: session[:user_id])
+
+  flash[:notice] = error_messages(aboot)
+
   redirect '/aboots'
 end
 

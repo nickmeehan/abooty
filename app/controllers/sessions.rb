@@ -11,8 +11,16 @@ post '/signup' do
 	@user = User.new(name: params[:name],
 									 handle: params[:handle],
 									 email: params[:email])
-	@user.password = params[:password_hash]
-	@user.save!
+
+	if params[:password_hash] == ""
+		@user.password_hash = params[:password_hash]
+	else
+		@user.password = params[:password_hash]
+	end
+	@user.save
+
+	flash[:notice] = error_messages(@user)
+
 	if @user.valid?
 		@user = User.find_by_email(params[:email])
 		session[:user_id] = @user.id
@@ -24,10 +32,12 @@ end
 
 post '/login' do
 	@user = User.find_by_email(params[:email])
+
 	if @user && @user.password == params[:password_hash]
 		session[:user_id] = @user.id
 		redirect "/"
 	else
+		flash[:notice] = ["Wrong email and/or password"]
 		redirect '/'
 	end
 end
