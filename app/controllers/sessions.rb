@@ -1,5 +1,6 @@
 get '/' do
 	if session[:user_id]
+		@aboots = Aboot.all
 		erb :welcome
 	else
 	  erb :index
