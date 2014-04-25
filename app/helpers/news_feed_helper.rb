@@ -1,6 +1,6 @@
 helpers do
 
-  def news_feed
+  def personal_feed
     feed_aboots = []
     feed_aboots << get_following_aboots
     feed_aboots << get_following_reboots
@@ -19,6 +19,14 @@ helpers do
     following = current_user.following
     following.each { |following| feed_reboots << following.reboots }
     feed_reboots.flatten.map { |reboot| reboot.aboot }
+  end
+
+  def favourite_feed
+    current_user.favorites.map { |favorite| favorite.aboot }
+  end
+
+  def global_feed
+    Aboot.all
   end
 
 end
