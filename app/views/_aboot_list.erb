@@ -1,6 +1,7 @@
 <div class="aboot_list">
 
   <% @aboots.each do |aboot| %>
+  <% @aboot = aboot %>
   <%= erb :_aboot_detail %>
   <% end %>
 
