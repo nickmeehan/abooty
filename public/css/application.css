@@ -5,6 +5,11 @@ body {
   background-attachment:fixed;
 }
 
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
 .main_page {
   margin-left: auto;
   margin-right: auto;
