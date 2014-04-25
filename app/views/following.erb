@@ -1,15 +1,3 @@
-<form method="get" action="/aboots">
-  <input type="submit" value="Home">
-</form>
-
-<form action="/users/<%= session[:user_id] %>" method="get">
-  <input type="submit" value="Profile Page">
-</form>
-
-<form action="/logout" method="post">
-  <input type="submit" value="logout">
-</form>
-
 <% @user_following.each do |followed| %>
   <div class="aboot_detail">
     <div id="gravatar">
@@ -18,7 +6,7 @@
       <% image_src = "http://www.gravatar.com/avatar/#{hash}" %>
       <img src="<%= image_src %>">
     </div>
-    
+
     <div id="aboot_body">
       <div id="user_handle">
         <a href="/users/<%= followed.id %>">@<%= followed.handle %></a>
