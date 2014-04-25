@@ -22,8 +22,8 @@ class User < ActiveRecord::Base
   end
 
   def following
-    following = Connection.where(user_id: session[:user_id])
-    following.map! do |followed|
+    following = Connection.where(user_id: self.id)
+    following.map do |followed|
       User.find(followed.follower_id)
     end
   end
