@@ -1,0 +1,16 @@
+<% if current_user %>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+    <li><a href="/global">Global</a></li>
+      <li><a href="/users/<%= session[:user_id] %>">Profile</a></li>
+      <li><a href="">Connections</a>
+        <ul>
+          <li><a href="/followers">Followers</a></li>
+          <li><a href="/following">Following</a></li>
+        </ul>
+      <li><a href="/favourites">Favourites</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+<% end %>

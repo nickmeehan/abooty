@@ -1,6 +1,7 @@
 <%= erb :_gravatar_image %>
 <% if @user.id == session[:user_id] %>
 	<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
+
 <% end %>
 <% if @user.id != session[:user_id] %>
 	<% if @user.followers.include?(@all_users.find(session[:user_id])) %>
@@ -13,14 +14,6 @@
 		</form>
 	<% end %>
 <% end %>
-
-<form method="get" action="/aboots">
-	<input type="submit" value="Home">
-</form>
-
-<form action="/logout" method="post">
-  <input type="submit" value="logout">
-</form>
 
 <div class="aboot_list">
 

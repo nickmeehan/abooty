@@ -1,5 +1,5 @@
 get '/aboots' do
-  @aboots = Aboot.all
+  @aboots = personal_feed
   erb :_home_page
 end
 
@@ -14,4 +14,9 @@ end
 post '/reboots/new' do
   Reboot.create(aboot_id: params[:id], user_id: session[:user_id])
   redirect '/aboots'
+end
+
+get '/global' do
+  @aboots = global_feed
+  erb :_home_page
 end

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :aboots
+  has_many :reboots
   has_many :favorites
   has_many :connections, foreign_key: :follower_id
   has_many :followers, through: :connections, source: :user
@@ -22,8 +23,8 @@ class User < ActiveRecord::Base
   end
 
   def following
-    following = Connection.where(user_id: session[:user_id])
-    following.map! do |followed|
+    following = Connection.where(user_id: self.id)
+    following.map do |followed|
       User.find(followed.follower_id)
     end
   end

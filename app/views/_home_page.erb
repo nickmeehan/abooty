@@ -2,13 +2,6 @@
 <%= erb :_aboot_form %>
 <%= erb :_errors %>
 <br>
-<form action="/logout" method="post">
-  <input type="submit" value="logout">
-</form>
-
-<form action="/users/<%= session[:user_id] %>" method="get">
-  <input type="submit" value="Profile Page">
-</form>
 
 <br>
 <%= erb :_aboot_list %>
