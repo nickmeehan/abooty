@@ -1,2 +1,32 @@
 <%= erb :_gravatar_image %>
-<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
+<% if @user.id == session[:user_id] %>
+	<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
+<% end %>
+<% if @user.id != session[:user_id] %>
+	<% if @user.followers.include?(@all_users.find(session[:user_id])) %>
+		<form action="/unfollow?user_id=<%= @user.id %>" method="post">
+			<input type="submit" value="Unfollow">
+		</form>
+	<% else %>
+		<form action="/follow?user_id=<%= @user.id %>" method="post">
+			<input type="submit" value="Follow">
+		</form>
+	<% end %>
+<% end %>
+
+<form method="get" action="/aboots">
+	<input type="submit" value="Home">
+</form>
+
+<form action="/logout" method="post">
+  <input type="submit" value="logout">
+</form>
+
+<div class="aboot_list">
+
+  <% @user.aboots.reverse.each do |aboot| %>
+  <% @aboot = aboot %>
+  <%= erb :_aboot_detail %>
+  <% end %>
+
+</div>
