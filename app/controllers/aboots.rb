@@ -1,5 +1,6 @@
 get '/aboots' do
-  @aboots = Aboot.all
+  # @aboots = Aboot.all
+  @aboots = news_feed
   erb :_home_page
 end
 
