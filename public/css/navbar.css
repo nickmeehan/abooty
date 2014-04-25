@@ -1,16 +1,13 @@
 /*http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu*/
+  
+nav {
+  width: 100%;
+}
 
-/*#super_ul {
-  width: 1000px;
-}*/
-
-ul {
+  #super_ul {
   margin: 0;
-}
-
-nav li {
-  width: 15%;
-}
+  text-align: center;
+  }
 
 nav ul ul {
   display: none;
@@ -40,6 +37,7 @@ nav ul {
 li {
   opacity: 0.8;
   float: left;
+  text-align: center;
 }
 
   nav ul li:hover {
@@ -55,8 +53,7 @@ li {
   }
 
 nav ul li a {
-  display: block;
-  padding: 25px 40px;
+  display: block; padding: 25px 40px;
   color: #303030; text-decoration: none;
 }
 
