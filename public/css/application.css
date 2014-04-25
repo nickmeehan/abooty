@@ -110,3 +110,12 @@ h1 {
 .canada_welcome{
   width: 25%;
 }
+
+#aboot_timestamp {
+  float: right;
+  display: inline-block;
+  padding-right: 12px;
+  padding-bottom: 5px;
+  font-style: italic;
+  color: grey;
+}

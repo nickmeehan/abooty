@@ -5,7 +5,7 @@
     <% image_src = "http://www.gravatar.com/avatar/#{hash}" %>
     <img src="<%= image_src %>">
   </div>
-  
+
   <div id="aboot_body">
     <div id="user_handle">
       <a href="/users/<%= @aboot.user.id %>">@<%= @aboot.user.handle %></a>
@@ -19,5 +19,9 @@
   <div id="aboot_buttons">
     <%= erb :_reboot_button %>
     <%= erb :_favorite_button %>
+  </div>
+
+  <div id="aboot_timestamp">
+    <%= @aboot.created_at.strftime('%b %e -%l:%M%P') %>
   </div>
 </div>
