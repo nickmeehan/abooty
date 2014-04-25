@@ -1,10 +1,21 @@
 <%= erb :_gravatar_image %>
-<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
+<% if @user.id == session[:user_id] %>
+	<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
+<% end %>
+<% if @user.id != session[:user_id] %>
+	<form action="/follow" method="post">
+		<input type="submit" value="Follow">
+	</form>
 
-<form action="/follow" method="post">
-	<input type="submit" value="Follow">
+	<form action="/unfollow" method="post">
+		<input type="submit" value="Unfollow">
+	</form>
+<% end %>
+
+<form method="get" action="/aboots">
+	<input type="submit" value="Home">
 </form>
 
-<form action="/unfollow" method="post">
-	<input type="submit" value="Unfollow">
+<form action="/logout" method="post">
+  <input type="submit" value="logout">
 </form>
