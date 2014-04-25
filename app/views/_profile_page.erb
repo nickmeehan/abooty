@@ -1,7 +1,7 @@
 <%= erb :_gravatar_image %>
 <% if @user.id == session[:user_id] %>
 	<h2><%= "Hey! Welcome back, #{@user.name}!" %></h2>
-	
+
 	<form method="get" action="/followers">
 		<input type="submit" value="Followers">
 	</form>
@@ -25,10 +25,6 @@
 
 <form method="get" action="/aboots">
 	<input type="submit" value="Home">
-</form>
-
-<form action="/logout" method="post">
-  <input type="submit" value="logout">
 </form>
 
 <div class="aboot_list">
