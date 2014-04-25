@@ -1,5 +1,17 @@
 /*http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu*/
 
+/*#super_ul {
+  width: 1000px;
+}*/
+
+ul {
+  margin: 0;
+}
+
+nav li {
+  width: 15%;
+}
+
 nav ul ul {
   display: none;
 }
@@ -18,7 +30,7 @@ nav ul {
   border-radius: 10px;
   list-style: none;
   position: relative;
-  display: inline-table;
+  /*display: inline-table;*/
 }
 
   nav ul:after {
@@ -43,7 +55,8 @@ li {
   }
 
 nav ul li a {
-  display: block; padding: 25px 40px;
+  display: block;
+  padding: 25px 40px;
   color: #303030; text-decoration: none;
 }
 
