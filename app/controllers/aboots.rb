@@ -1,8 +1,3 @@
-get '/aboots' do
-  @aboots = personal_feed
-  erb :_home_page
-end
-
 post '/aboots/new' do
   aboot = Aboot.create(content: params[:content], user_id: session[:user_id])
 
