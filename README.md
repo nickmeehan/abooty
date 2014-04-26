@@ -6,4 +6,4 @@ This is our Week 1 group project for Phase 2 at DBC. The team consisted of Andre
 
 Check out the app deployed live at:
 
-[Abooty](abooty.herukoapp.com)
+[Abooty](abooty.herokuapp.com)
